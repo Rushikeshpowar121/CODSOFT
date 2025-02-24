@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a; /* Darker background */
+}
+
+.app-container {
+  text-align: center;
+}
+
+h1 {
+  color: #ecf0f1; /* Light text color */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.container {
+  position: relative;
+  min-width: 300px;
+  min-height: 400px;
+  padding: 40px 30px 30px;
+  border-radius: 20px;
+  background: #2c3e50; /* Dark blue container */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculator .value {
+  position: relative;
+  grid-column: span 4;
+  height: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #a7af7c; /* Brighter display background */
+  color: #1a1a1a; /* Dark text color for better contrast */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3); /* Inner shadow */
+  text-align: right;
+  padding: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.calculator span {
+  color: #ecf0f1; /* Light text color */
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 80px;
+  background: #89aacc; /* Light blue button background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+  user-select: none;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.calculator span:active {
+  background: #1abc9c; /* Highlight color on click */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+.calculator span i {
+  position: relative;
+  font-style: normal;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.calculator .clear {
+  grid-column: span 2;
+  background: #ff4444; /* Bright red color for clear button */
+}
+
+.calculator .clear:active {
+  background: #cc0000; /* Darker red on click */
+}
+
+.calculator .plus {
+  grid-row: span 2;
+  height: 180px;
+  background: #3498db; /* Blue color for plus button */
+}
+
+.calculator .plus:active {
+  background: #2980b9; /* Darker blue on click */
+}
+
+.calculator .equal {
+  background: #2ecc71; /* Green color for equal button */
+}
+
+.calculator .equal:active {
+  background: #27ae60; /* Darker green on click */
+}
+
+.calculator .num {
+  background: #548dca; /* Light blue button background */
+}
+
+.calculator .num:active {
+  background: #1abc9c; /* Highlight color on click */
+}
